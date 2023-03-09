@@ -1,0 +1,46 @@
+
+/***
+ * Common definition details
+***/
+syntax = "proto3";
+package scancctv.api.common.v1;
+
+option go_package = "github.com/scancctv/public-api/api/commonv1;commonv1";
+
+
+/*
+ * Status code Enum
+ */
+enum StatusCode {
+  UNSPECIFIED = 0;
+  SUCCESS = 1;
+  SUCCEEDED_WITH_WARNINGS = 2;
+  WARNING = 3;
+  FAILED = 4;
+}
+
+/*
+ * Detailed response details
+ */
+message StatusResponse {
+  // response status
+  StatusCode status = 1;
+  // Status message
+  string message = 2;
+};
+
+
+/*
+ * Echo Message Request
+ */
+message EchoRequest {
+  string message = 1;
+}
+
+/*
+ * Echo Message Response
+ */
+message EchoResponse {
+  string message = 1;
+}
+
