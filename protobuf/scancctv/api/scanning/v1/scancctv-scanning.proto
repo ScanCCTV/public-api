@@ -9,8 +9,8 @@ option go_package = "github.com/scancctv/public-api/api/scanningv1;scanningv1";
 
 import "scancctv/api/common/v1/scancctv-common.proto";
 
- // Expose all of the ScqnCCTV Scanning RPCs here
+// Expose all of the ScqnCCTV Scanning RPCs here
 service Scanning {
   // Standard echo
-    rpc Echo(scancctv.api.common.v1.EchoRequest) returns(scancctv.api.common.v1.EchoResponse);
+  rpc Echo(scancctv.api.common.v1.EchoRequest) returns(scancctv.api.common.v1.EchoResponse);
 }
